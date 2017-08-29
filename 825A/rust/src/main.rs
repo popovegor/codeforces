@@ -18,16 +18,8 @@ fn main() {
      			let mut prev_ch = '1';
      			for ch in chars {
      				match ch {
-	     				'1' => {
-	     					num += 1;
-	     				},
-	     				'0' if prev_ch == '0' => {
-	     					print!("0");
-	     				}
-	     				'0' => {
-	     					print!("{}", num);
-	     					num = 0;
-	     				}
+	     				'1' => num += 1,
+	     				'0' => { print!("{}", num); num = 0; }, 
 	     				_ => panic!("SOS"),
      				}
      				prev_ch = ch;
